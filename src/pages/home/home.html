@@ -31,11 +31,10 @@
         <img src="{{item.urlToImage}}">
       </ion-thumbnail>
       <h2>{{item.title}}</h2>
-
-      <ion-icon name="person" *ngIf="item.author">&nbsp;{{item.author}}</ion-icon> &nbsp;
-      <ion-icon name="calendar">&nbsp;{{item.publishedAt}}</ion-icon>
+      <ion-icon name="person" ion-left *ngIf="item.author">&nbsp;{{item.author}}</ion-icon>
+      <br/>
+      <ion-icon name="calendar" ion-left>&nbsp;{{item.publishedAt}}</ion-icon>
       <button ion-button clear item-right (click)="viewItem(item)">View</button>
     </ion-item>
   </ion-list>
-
 </ion-content>

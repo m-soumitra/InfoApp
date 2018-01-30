@@ -1,17 +1,47 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      About
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-slides pager>
+    <ion-slide>
+      <ion-list>
+        <ion-list-header>Author</ion-list-header>
+        <ion-item>
+          <ion-icon name="person" item-start></ion-icon>
+          Soumitra Mohakud
+        </ion-item>
+        <ion-item>
+          <ion-icon name="git-branch" item-start></ion-icon>
+          GitHub: m-soumitra
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <ion-list-header>App Details</ion-list-header>
+        <ion-item>
+          <ion-icon name="finger-print" item-start></ion-icon>
+          Version: 1.0.0
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <ion-list-header>Powered by</ion-list-header>
+        <ion-item>
+          <ion-icon name="ionic" item-start></ion-icon>
+          @ionicframework
+        </ion-item>
+        <ion-item>
+          <ion-icon name="share-alt" item-start></ion-icon>
+          News API
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
