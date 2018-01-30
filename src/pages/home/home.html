@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>InfoApp</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Category</ion-label>
+      <ion-select (ionChange)="changeCategory()" [(ngModel)]="category" name="category">
+        <ion-option value="sports">Sports</ion-option>
+        <ion-option value="business">Business</ion-option>
+        <ion-option value="music">Music</ion-option>
+        <ion-option value="health">Health</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Country</ion-label>
+      <ion-select (ionChange)="changeCountry()" [(ngModel)]="country" name="country">
+        <ion-option value="us">US</ion-option>
+        <ion-option value="in">India</ion-option>
+        <ion-option value="au">Australia</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-thumbnail item-left *ngIf="item.urlToImage">
+        <img src="{{item.urlToImage}}">
+      </ion-thumbnail>
+      <h2>{{item.title}}</h2>
+
+      <ion-icon name="person" *ngIf="item.author">&nbsp;{{item.author}}</ion-icon> &nbsp;
+      <ion-icon name="calendar">&nbsp;{{item.publishedAt}}</ion-icon>
+      <button ion-button clear item-right (click)="viewItem(item)">View</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
